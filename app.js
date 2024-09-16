@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 5000
 const {MONGOURI} = require('./config/keys')
 
 const path = require("path")
+const cors = require('cors');
+
+app.use(cors());
 
 require('./models/user')
 require('./models/post')
